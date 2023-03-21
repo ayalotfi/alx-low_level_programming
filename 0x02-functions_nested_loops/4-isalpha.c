@@ -5,15 +5,15 @@
  *
  * @c: character in ascii code
  *
- * Retur:1 fot letter. 0 for the rest 
+ * Return:1 for letter. 0 for the rest
  */
 
-int _isalpha(int c);
+int _isalpha(int c)
 {
-	if ((c >= 65 && c <= 90)  || (c >= 97 && <= 122))
-	{
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+{
 
-	return (1);
-	}
+return (1);
+}
 return (0);
 }
