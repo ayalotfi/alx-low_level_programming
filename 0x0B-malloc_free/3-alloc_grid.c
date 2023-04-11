@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * **alloc_grid => 2 dimensional array of integers :)
+ * **alloc_grid -> 2 dimensional array of integers :)
  *
  * @width: Input Gird With
  * @height: Input Gird Height
