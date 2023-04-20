@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_number -> prints an integer :)
+ * print_number -> prints an integer
  *
  * @n: input
  */
@@ -28,7 +28,7 @@ void print_number(int n)
 }
 
 /**
- * print_numbers -> Prints numbers, followed by a new line 
+ * print_numbers -> Prints numbers, followed by a new line
  *
  * @separator: Input String Between Numbers
  * @n: Input Numbers
