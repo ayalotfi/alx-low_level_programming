@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - Prints a listint_t linked list :)
+ * print_listint_safe - Prints a listint_t linked list
  *
  * @head: Input list
  *
