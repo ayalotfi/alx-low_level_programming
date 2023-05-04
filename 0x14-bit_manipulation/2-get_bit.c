@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_bit =  the value of the bit at index index or -1 if an error occured
+ * get_bit =  the value of the bit at index index if an error occured
  *
  * @n:the  Input Number
  *
