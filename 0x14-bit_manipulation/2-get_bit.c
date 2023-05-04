@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * get_bit =  the value of the bit at index index if an error occured
+ * get_bit -> Returns the value of a bit at a given index.
  *
- * @n:the  Input Number
+ * @n: Input Number
  *
  * @index: Index of the bit
  *
- * Return:* Value Bit
+ * Return: Value Bit
 */
 
 int get_bit(unsigned long int n, unsigned int index)
