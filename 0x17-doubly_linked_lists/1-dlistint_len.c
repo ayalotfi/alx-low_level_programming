@@ -1,7 +1,9 @@
 #include "lists.h"
 
 /**
- * dlistint_len -> Returns the number of elements in a linked dlistint_t list
+ * dlistint_len -> Returns the number of elements in a linked dlistint_t lista:)
+ * @h: Head List
+ * Return: Nodes Number:)
  */
 
 size_t dlistint_len(const dlistint_t *h)
