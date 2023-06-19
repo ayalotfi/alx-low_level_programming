@@ -52,7 +52,6 @@ int div(int a, int b)
  * mod -> modulus of two integers:)
  * @a: first integer:)
  * @b: second integer:)
- * Return: Remainder of a and b:)
 */
 
 int mod(int a, int b)
