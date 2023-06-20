@@ -1,10 +1,10 @@
 #include "operations.h"
 
 /**
- * add -> Adds two integers:)
- * @a: first integer.
- * @b: second integer.
- * Return: sum of a & b:)
+ * add -> Adds two integers.
+ * @a: First int.
+ * @b: Second int.
+ * Return: Sum of a and b.
 */
 
 int add(int a, int b)
@@ -13,10 +13,10 @@ int add(int a, int b)
 }
 
 /**
- * sub -> subtracts two integers:)
- * @a: first integer:)
- * @b: second integer:)
- * Return: difference of a & b:)
+ * sub -> Subtracts two integers.
+ * @a: First int.
+ * @b: Second int.
+ * Return: Difference of a and b.
 */
 
 int sub(int a, int b)
@@ -25,10 +25,10 @@ int sub(int a, int b)
 }
 
 /**
- * mul -> multiplie two integers:)
- * @a: first integer:)
- * @b: second integer:)
- * Return: product of a and b:)
+ * mul -> Multiplies two integers.
+ * @a: First int.
+ * @b: Second int.
+ * Return: Product of a and b.
 */
 
 int mul(int a, int b)
@@ -37,10 +37,10 @@ int mul(int a, int b)
 }
 
 /**
- * div -> divides two integers:)
- * @a: first integer:)
- * @b: second integer:)
- * Return: quotient of a and b:)
+ * div -> Divides two integers.
+ * @a: First int.
+ * @b: Second int.
+ * Return: Quotient of a and b.
 */
 
 int div(int a, int b)
@@ -49,9 +49,10 @@ int div(int a, int b)
 }
 
 /**
- * mod -> modulus of two integers:)
- * @a: first integer:)
- * @b: second integer:)
+ * mod -> Modulus of two integers.
+ * @a: First int.
+ * @b: Second int.
+ * Return: Remainder of a and b.
 */
 
 int mod(int a, int b)
