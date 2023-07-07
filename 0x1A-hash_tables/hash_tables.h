@@ -1,37 +1,84 @@
+#ifndef _HASH_TABELS_
+#define _HASH_TABELS_
+
+#include <stdio.h>
 #include <stdlib.h>
-#include "hash_tables.h"
+#include <string.h>
 
 /**
- * hash_table_create - Creates a hash table
- * @size: The size of the array
+ * struct hash_node_s ->> hash table node.
  *
- * Return: A pointer to the newly created hash table, or NULL if failed
+ * @key: key, str.
+ * @value: value key.
+ * @next: A pointer to the next node of the List.
  */
-hash_table_t *hash_table_create(unsigned long int size)
+
+typedef struct hash_node_s
 {
-    hash_table_t *hash_table;
-    unsigned long int i;
+	 char *key;
+	 char *value;
+	 struct hash_node_s *next;
+} hash_node_t;
 
-    /* Allocate memory for the hash table structure */
-    hash_table = malloc(sizeof(hash_table_t));
-    if (hash_table == NULL)
-        return NULL;
+/**
+ * struct hash_table_s ->> Hash table data structure.
+ * @size: size array.
+ * @array: An array of size @size.
+ */
 
-    /* Allocate memory for the array of hash table nodes */
-    hash_table->array = malloc(sizeof(hash_node_t *) * size);
-    if (hash_table->array == NULL)
-    {
-        free(hash_table);
-        return NULL;
-    }
+typedef struct hash_table_s
+{
+	 unsigned long int size;
+	 hash_node_t **array;
+} hash_table_t;
 
-    /* Initialize each node in the array to NULL */
-    for (i = 0; i < size; i++)
-        hash_table->array[i] = NULL;
+hash_table_t *hash_table_create(unsigned long int size);
+unsigned long int hash_djb2(const unsigned char *str);
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+char *hash_table_get(const hash_table_t *ht, const char *key);
+void hash_table_print(const hash_table_t *ht);
+void hash_table_delete(hash_table_t *ht);
 
-    /* Set the size of the hash table */
-    hash_table->size = size;
+/**
+ * struct shash_node_s - Node of a sorted hash table.
+ * @key: The key, str.
+ * @value: The value corresponding to a key.
+ * @next: A pointer to next node of the List.
+ * @sprev: A pointer to previous element of the sorted linked list.
+ * @snext: A pointer to next element of the sorted linked list.
+ */
 
-    return hash_table;
-}
+typedef struct shash_node_s
+{
+     char *key;
+     char *value;
+     struct shash_node_s *next;
+     struct shash_node_s *sprev;
+     struct shash_node_s *snext;
+} shash_node_t;
 
+/**
+ * struct shash_table_s ->> Sorted hash table data structure.
+ * @size: The size of the array.
+ * @array: An array of size @size.
+ * @shead: A pointer to the first element of the sorted linked list
+ * @stail: A pointer to the last element of the sorted linked list
+ */
+
+typedef struct shash_table_s
+{
+     unsigned long int size;
+     shash_node_t **array;
+     shash_node_t *shead;
+     shash_node_t *stail;
+} shash_table_t;
+
+shash_table_t *shash_table_create(unsigned long int size);
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+char *shash_table_get(const shash_table_t *ht, const char *key);
+void shash_table_print(const shash_table_t *ht);
+void shash_table_print_rev(const shash_table_t *ht);
+void shash_table_delete(shash_table_t *ht);
+
+#endif
